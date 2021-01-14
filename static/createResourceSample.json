@@ -1,0 +1,12 @@
+{
+    "agent": "192.168.1.7",
+    
+    "component": "alex",
+    "componentTag": "",
+    "description": "this a test of automated resource creation",
+    
+    "name": "nodeJSTest",
+    "parent": ""
+    
+   
+  }

@@ -1,0 +1,14 @@
+{
+  "name": "ucdhttpclient",
+  "version": "1.0.0",
+  "description": "a test http client for urbancode deploy written on node.js",
+  "main": "httpGet.js",
+  "scripts": {
+    "test": "node httpGet.js"
+  },
+  "author": "alex kara",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
