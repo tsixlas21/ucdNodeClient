@@ -50,6 +50,7 @@ if (httpMethod==='GET'){
     var req = http.request(options, callback).end();
     }
     if (httpMethod==='POST'){
+      console.log("HTTPPOST")
         var req = http.request(options, callback).end();
         }
 if (httpMethod==='PUT'){
