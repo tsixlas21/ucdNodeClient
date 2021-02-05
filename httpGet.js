@@ -46,6 +46,7 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 //Main Logic
 if (httpMethod==='GET'){
+  console.log ("HTTPGET")
     var req = http.request(options, callback).end();
     }
     if (httpMethod==='POST'){
