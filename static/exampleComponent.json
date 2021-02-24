@@ -1,0 +1,247 @@
+{
+    "name": "ucdNodeClientComp",
+    "description": "This is component I am developed as part of my upskilling in node.js ",
+    "created": 1610721346847,
+    "componentType": "STANDARD",
+    "ignoreQualifiers": 0,
+    "importAutomatically": false,
+    "useVfs": true,
+    "active": true,
+    "deleted": false,
+    "defaultVersionType": "FULL",
+    "cleanupDaysToKeep": 0,
+    "cleanupCountToKeep": 0,
+    "sourceConfigPluginName": "Git",
+    "envPropDefs": [],
+    "resPropDefs": [],
+    "versionPropDefs": [{
+        "name": "ucdNodeClientComp_VersionId",
+        "label": "ucdNodeClientComp_VersionId",
+        "pattern": "",
+        "type": "TEXT",
+        "isHidden": false,
+        "required": false,
+        "description": "",
+        "placeholder": ""
+    }],
+    "propSheetGroup": {"propSheets": [
+        {
+            "name": "template",
+            "properties": []
+        },
+        {
+            "name": "custom",
+            "properties": []
+        },
+        {
+            "name": "GitComponentProperties",
+            "properties": [
+                {
+                    "name": "branch",
+                    "value": "master",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "username",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "password",
+                    "value": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|RddqsUJvI\/KoNkG4R6PXAA==|5sYt9QM9CuuF0g+8+sfINg==}",
+                    "description": "",
+                    "secure": true
+                },
+                {
+                    "name": "watchTags",
+                    "value": "false",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "recursive",
+                    "value": "false",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "trustAllCerts",
+                    "value": "false",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "includes",
+                    "value": "**\/*",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "excludes",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "gitPath",
+                    "value": "git",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "saveFileExecuteBits",
+                    "value": "false",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "extensions",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "repoUrl",
+                    "value": "https:\/\/github.com\/tsixlas21\/ucdNodeClient",
+                    "description": "",
+                    "secure": false
+                }
+            ]
+        }
+    ]},
+    "processes": [{
+        "name": "Deploy",
+        "description": "This process is deploying my node js client to the target host ",
+        "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+        "takesVersion": true,
+        "inventoryActionType": "ADD",
+        "status": "Active",
+        "configActionType": "ADD",
+        "active": true,
+        "path": "components\/17706794-5273-a393-4dfa-3e44ed80f584\/processes\/177067f4-d729-9a3e-1166-ca486576ef23",
+        "deleted": false,
+        "propDefs": [],
+        "rootActivity": {
+            "edges": [
+                {
+                    "to": "Download node Js client package to the target host",
+                    "type": "ALWAYS",
+                    "value": ""
+                },
+                {
+                    "to": "Check if node.js is installed in the target host",
+                    "from": "Download node Js client package to the target host",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "42d2b74765e12279bc23925e2b6103",
+                    "from": "Check if node.js is installed in the target host",
+                    "type": "SUCCESS",
+                    "value": ""
+                }
+            ],
+            "offsets": [
+                {
+                    "name": "42d2b74765e12279bc23925e2b6103",
+                    "x": -5,
+                    "y": 420,
+                    "h": 80,
+                    "w": 120
+                },
+                {
+                    "name": "Download node Js client package to the target host",
+                    "x": -75,
+                    "y": 145,
+                    "h": 70,
+                    "w": 420
+                },
+                {
+                    "name": "Check if node.js is installed in the target host",
+                    "x": -25,
+                    "y": 270,
+                    "h": 70,
+                    "w": 380
+                }
+            ],
+            "layoutMode": "manual",
+            "type": "graph",
+            "name": "d279ff3e-3f96-4764-b8ef-d84711c57b22",
+            "children": [
+                {
+                    "type": "finish",
+                    "name": "42d2b74765e12279bc23925e2b6103",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "pluginVersion": 31,
+                    "commandName": "Download Artifacts",
+                    "pluginName": "UrbanCode Deploy Versioned File Storage",
+                    "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                    "properties": {
+                        "directoryOffset": ".",
+                        "artifactSetBaseDir": "",
+                        "fileIncludePatterns": "**\/*",
+                        "fileExcludePatterns": "",
+                        "syncMode": "true",
+                        "fullVerification": "true",
+                        "setFileExecuteBits": "false",
+                        "verifyFileIntegrity": "false",
+                        "versionId": "${p:version.id}",
+                        "serverUrl": "${p:server.url}",
+                        "compId": "${p:component.id}",
+                        "resId": "${p:resource.id}",
+                        "charset": "",
+                        "label": ""
+                    },
+                    "cachedAuthTokenRestriction": {
+                        "name": "System Default",
+                        "description": "Used by default for any plugin steps without a specified token restriction",
+                        "restrictions": [{
+                            "verb": "ALL",
+                            "url": "\/*"
+                        }]
+                    },
+                    "type": "plugin",
+                    "name": "Download node Js client package to the target host",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "pluginVersion": 9,
+                    "commandName": "Shell",
+                    "pluginName": "Shell",
+                    "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                    "properties": {
+                        "directoryOffset": ".",
+                        "shellInterpreter": "",
+                        "scriptBody": "echo \"check if node js is installed in the target host\"\n#node\n",
+                        "runAsDaemon": "false",
+                        "outputFile": ""
+                    },
+                    "cachedAuthTokenRestriction": {
+                        "name": "System Default",
+                        "description": "Used by default for any plugin steps without a specified token restriction",
+                        "restrictions": [{
+                            "verb": "ALL",
+                            "url": "\/*"
+                        }]
+                    },
+                    "type": "plugin",
+                    "name": "Check if node.js is installed in the target host",
+                    "children": []
+                }
+            ]
+        }
+    }],
+    "configTemplates": [],
+    "genericProcesses": [],
+    "teamMappings": [],
+    "tags": []
+}

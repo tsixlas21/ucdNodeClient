@@ -1,0 +1,1018 @@
+{
+    "name": "ucdNodeClientApp",
+    "description": "This is the app that I will use to orchestrate the deployments of my node js components ",
+    "enforceCompleteSnapshots": false,
+    "propSheet": {"properties": []},
+    "templatePropSheet": {
+        "name": "template",
+        "properties": []
+    },
+    "components": [
+        {
+            "name": "AzureWorkbookComponent",
+            "description": "",
+            "created": 1602769540280,
+            "componentType": "STANDARD",
+            "ignoreQualifiers": 0,
+            "importAutomatically": true,
+            "useVfs": true,
+            "active": true,
+            "deleted": false,
+            "defaultVersionType": "FULL",
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "sourceConfigPluginName": "Git",
+            "envPropDefs": [],
+            "resPropDefs": [],
+            "versionPropDefs": [],
+            "propSheetGroup": {"propSheets": [
+                {
+                    "name": "custom",
+                    "properties": []
+                },
+                {
+                    "name": "template",
+                    "properties": []
+                },
+                {
+                    "name": "GitComponentProperties",
+                    "properties": [
+                        {
+                            "name": "branch",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "username",
+                            "value": "alexkara",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "password",
+                            "value": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|KrbxE3cX++BVknssdHH9Yg==|DcVPa1bNUIAku\/Z9Jy\/vLprJT7QUZ+7nL3ON5U6D1AwjDH6y7Vcu1pg7VqcJUiAVIoYjDW0ResM\/uSQ\/XVlzqw==}",
+                            "description": "",
+                            "secure": true
+                        },
+                        {
+                            "name": "watchTags",
+                            "value": "true",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "recursive",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "trustAllCerts",
+                            "value": "true",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "includes",
+                            "value": "**\/*",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "excludes",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "gitPath",
+                            "value": "git",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "saveFileExecuteBits",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "extensions",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "repoUrl",
+                            "value": "https:\/\/dev.azure.com\/alexkara0007\/AzureWorkbook\/_git\/AzureWorkbook",
+                            "description": "",
+                            "secure": false
+                        }
+                    ]
+                }
+            ]},
+            "processes": [
+                {
+                    "name": "Deploy",
+                    "description": "",
+                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                    "takesVersion": true,
+                    "inventoryActionType": "ADD",
+                    "status": "Active",
+                    "configActionType": "ADD",
+                    "active": true,
+                    "path": "components\/1752c825-4b9d-007c-dd9a-64750882009a\/processes\/1752c888-c466-b4d1-d332-023363a9a1da",
+                    "deleted": false,
+                    "propDefs": [],
+                    "rootActivity": {
+                        "edges": [
+                            {
+                                "to": "Set Process Request Property",
+                                "from": "Shell",
+                                "type": "SUCCESS",
+                                "value": ""
+                            },
+                            {
+                                "to": "fb0aa84ddf6c337bf0419860a76c0c",
+                                "from": "Set Process Request Property",
+                                "type": "SUCCESS",
+                                "value": ""
+                            },
+                            {
+                                "to": "Shell",
+                                "type": "ALWAYS",
+                                "value": ""
+                            }
+                        ],
+                        "offsets": [
+                            {
+                                "name": "Set Process Request Property",
+                                "x": -242,
+                                "y": 250,
+                                "h": 70,
+                                "w": 320
+                            },
+                            {
+                                "name": "fb0aa84ddf6c337bf0419860a76c0c",
+                                "x": -5,
+                                "y": 420,
+                                "h": 80,
+                                "w": 120
+                            },
+                            {
+                                "name": "Shell",
+                                "x": -12,
+                                "y": 145,
+                                "h": 70,
+                                "w": 160
+                            }
+                        ],
+                        "layoutMode": "manual",
+                        "type": "graph",
+                        "name": "90d6f5bc-3228-41ef-82bd-64837cc4dde3",
+                        "children": [
+                            {
+                                "type": "finish",
+                                "name": "fb0aa84ddf6c337bf0419860a76c0c",
+                                "children": []
+                            },
+                            {
+                                "allowFailure": false,
+                                "useImpersonation": false,
+                                "showHidden": false,
+                                "impersonationUseSudo": false,
+                                "pluginVersion": 9,
+                                "commandName": "Shell",
+                                "pluginName": "Shell",
+                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                                "properties": {
+                                    "directoryOffset": ".",
+                                    "shellInterpreter": "",
+                                    "scriptBody": "echo \"Hello From UrbanCode -Azure DevOps Integration\"\nsleep 10",
+                                    "runAsDaemon": "false",
+                                    "outputFile": ""
+                                },
+                                "cachedAuthTokenRestriction": {
+                                    "name": "System Default",
+                                    "description": "Used by default for any plugin steps without a specified token restriction",
+                                    "restrictions": [{
+                                        "verb": "ALL",
+                                        "url": "\/*"
+                                    }]
+                                },
+                                "type": "plugin",
+                                "name": "Shell",
+                                "children": []
+                            },
+                            {
+                                "allowFailure": false,
+                                "useImpersonation": false,
+                                "showHidden": false,
+                                "impersonationUseSudo": false,
+                                "pluginVersion": 8,
+                                "commandName": "Set Process Request Property",
+                                "pluginName": "UrbanCode Deploy Processes",
+                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                                "properties": {
+                                    "propertyName": "test",
+                                    "propertyValue": "test",
+                                    "secureValue": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|fr9uZ0D0VDkupwrce55KLA==|Hi6pVT\/xIz9CD4uRwEAiSA==}",
+                                    "processRequestId": "${p:request.id}"
+                                },
+                                "cachedAuthTokenRestriction": {
+                                    "name": "System Default",
+                                    "description": "Used by default for any plugin steps without a specified token restriction",
+                                    "restrictions": [{
+                                        "verb": "ALL",
+                                        "url": "\/*"
+                                    }]
+                                },
+                                "type": "plugin",
+                                "name": "Set Process Request Property",
+                                "children": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "testForJsonParsingSolution",
+                    "description": "",
+                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                    "takesVersion": true,
+                    "inventoryActionType": "ADD",
+                    "status": "Active",
+                    "configActionType": "ADD",
+                    "active": true,
+                    "path": "components\/1752c825-4b9d-007c-dd9a-64750882009a\/processes\/177d3985-395e-b245-66ff-f3ee4dc1d102",
+                    "deleted": false,
+                    "propDefs": [],
+                    "rootActivity": {
+                        "edges": [
+                            {
+                                "to": "a684ac31679e6bb813fdfbafc7c020",
+                                "from": "Shell",
+                                "type": "SUCCESS",
+                                "value": ""
+                            },
+                            {
+                                "to": "Shell",
+                                "from": "Download Artifacts",
+                                "type": "SUCCESS",
+                                "value": ""
+                            },
+                            {
+                                "to": "Download Artifacts",
+                                "type": "ALWAYS",
+                                "value": ""
+                            }
+                        ],
+                        "offsets": [
+                            {
+                                "name": "Shell",
+                                "x": 77,
+                                "y": 220.25,
+                                "h": 70,
+                                "w": 160
+                            },
+                            {
+                                "name": "a684ac31679e6bb813fdfbafc7c020",
+                                "x": -5,
+                                "y": 420,
+                                "h": 80,
+                                "w": 120
+                            },
+                            {
+                                "name": "Download Artifacts",
+                                "x": 170,
+                                "y": 49.25,
+                                "h": 70,
+                                "w": 260
+                            }
+                        ],
+                        "layoutMode": "manual",
+                        "type": "graph",
+                        "name": "0eabbd0f-2b7b-48d8-a31b-379318506509",
+                        "children": [
+                            {
+                                "type": "finish",
+                                "name": "a684ac31679e6bb813fdfbafc7c020",
+                                "children": []
+                            },
+                            {
+                                "allowFailure": false,
+                                "useImpersonation": false,
+                                "showHidden": false,
+                                "impersonationUseSudo": false,
+                                "pluginVersion": 35,
+                                "commandName": "Download Artifacts",
+                                "pluginName": "UrbanCode Deploy Versioned File Storage",
+                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                                "properties": {
+                                    "directoryOffset": ".",
+                                    "artifactSetBaseDir": "",
+                                    "fileIncludePatterns": "**\/*",
+                                    "fileExcludePatterns": "",
+                                    "syncMode": "true",
+                                    "handleIncrementalVersions": "false",
+                                    "fullVerification": "true",
+                                    "setFileExecuteBits": "false",
+                                    "verifyFileIntegrity": "false",
+                                    "charset": "",
+                                    "versionId": "${p:version.id}",
+                                    "versionType": "${p:version.type}",
+                                    "serverUrl": "${p:server.url}",
+                                    "compId": "${p:component.id}",
+                                    "resId": "${p:resource.id}",
+                                    "envId": "${p:environment.id}",
+                                    "maxMemory": "1G",
+                                    "label": ""
+                                },
+                                "cachedAuthTokenRestriction": {
+                                    "name": "System Default",
+                                    "description": "Used by default for any plugin steps without a specified token restriction",
+                                    "restrictions": [{
+                                        "verb": "ALL",
+                                        "url": "\/*"
+                                    }]
+                                },
+                                "type": "plugin",
+                                "name": "Download Artifacts",
+                                "children": []
+                            },
+                            {
+                                "allowFailure": false,
+                                "useImpersonation": false,
+                                "showHidden": false,
+                                "impersonationUseSudo": false,
+                                "pluginVersion": 9,
+                                "commandName": "Shell",
+                                "pluginName": "Shell",
+                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                                "properties": {
+                                    "directoryOffset": ".",
+                                    "shellInterpreter": "",
+                                    "scriptBody": "echo Hello World",
+                                    "runAsDaemon": "false",
+                                    "outputFile": ""
+                                },
+                                "cachedAuthTokenRestriction": {
+                                    "name": "System Default",
+                                    "description": "Used by default for any plugin steps without a specified token restriction",
+                                    "restrictions": [{
+                                        "verb": "ALL",
+                                        "url": "\/*"
+                                    }]
+                                },
+                                "type": "plugin",
+                                "name": "Shell",
+                                "children": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "configTemplates": [],
+            "genericProcesses": [],
+            "teamMappings": [],
+            "tags": []
+        },
+        {
+            "name": "ucdNodeClientComp",
+            "description": "This is component I am developed as part of my upskilling in node.js ",
+            "created": 1610721346847,
+            "componentType": "STANDARD",
+            "ignoreQualifiers": 0,
+            "importAutomatically": false,
+            "useVfs": true,
+            "active": true,
+            "deleted": false,
+            "defaultVersionType": "FULL",
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "sourceConfigPluginName": "Git",
+            "envPropDefs": [{
+                "name": "installationPath",
+                "label": "installationPath",
+                "pattern": "",
+                "type": "TEXT",
+                "isHidden": false,
+                "required": false,
+                "description": "this is the installation path for my app",
+                "placeholder": ""
+            }],
+            "resPropDefs": [],
+            "versionPropDefs": [{
+                "name": "ucdNodeClientComp_VersionId",
+                "label": "ucdNodeClientComp_VersionId",
+                "pattern": "",
+                "type": "TEXT",
+                "isHidden": false,
+                "required": false,
+                "description": "",
+                "placeholder": ""
+            }],
+            "propSheetGroup": {"propSheets": [
+                {
+                    "name": "template",
+                    "properties": []
+                },
+                {
+                    "name": "custom",
+                    "properties": []
+                },
+                {
+                    "name": "GitComponentProperties",
+                    "properties": [
+                        {
+                            "name": "branch",
+                            "value": "master",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "username",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "password",
+                            "value": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|RddqsUJvI\/KoNkG4R6PXAA==|5sYt9QM9CuuF0g+8+sfINg==}",
+                            "description": "",
+                            "secure": true
+                        },
+                        {
+                            "name": "watchTags",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "recursive",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "trustAllCerts",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "includes",
+                            "value": "**\/*",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "excludes",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "gitPath",
+                            "value": "git",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "saveFileExecuteBits",
+                            "value": "false",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "extensions",
+                            "description": "",
+                            "secure": false
+                        },
+                        {
+                            "name": "repoUrl",
+                            "value": "https:\/\/github.com\/tsixlas21\/ucdNodeClient",
+                            "description": "",
+                            "secure": false
+                        }
+                    ]
+                }
+            ]},
+            "processes": [{
+                "name": "Deploy",
+                "description": "This process is deploying my node js client to the target host ",
+                "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                "takesVersion": true,
+                "inventoryActionType": "ADD",
+                "status": "Active",
+                "configActionType": "ADD",
+                "active": true,
+                "path": "components\/17706794-5273-a393-4dfa-3e44ed80f584\/processes\/177067f4-d729-9a3e-1166-ca486576ef23",
+                "deleted": false,
+                "propDefs": [],
+                "rootActivity": {
+                    "edges": [
+                        {
+                            "to": "Download node Js client package to the target host",
+                            "type": "ALWAYS",
+                            "value": ""
+                        },
+                        {
+                            "to": "Check if node.js is installed in the target host",
+                            "from": "Download node Js client package to the target host",
+                            "type": "SUCCESS",
+                            "value": ""
+                        },
+                        {
+                            "to": "42d2b74765e12279bc23925e2b6103",
+                            "from": "Check if node.js is installed in the target host",
+                            "type": "SUCCESS",
+                            "value": ""
+                        }
+                    ],
+                    "offsets": [
+                        {
+                            "name": "42d2b74765e12279bc23925e2b6103",
+                            "x": -5,
+                            "y": 420,
+                            "h": 80,
+                            "w": 120
+                        },
+                        {
+                            "name": "Download node Js client package to the target host",
+                            "x": -75,
+                            "y": 145,
+                            "h": 70,
+                            "w": 420
+                        },
+                        {
+                            "name": "Check if node.js is installed in the target host",
+                            "x": -25,
+                            "y": 270,
+                            "h": 70,
+                            "w": 380
+                        }
+                    ],
+                    "layoutMode": "manual",
+                    "type": "graph",
+                    "name": "d279ff3e-3f96-4764-b8ef-d84711c57b22",
+                    "children": [
+                        {
+                            "type": "finish",
+                            "name": "42d2b74765e12279bc23925e2b6103",
+                            "children": []
+                        },
+                        {
+                            "allowFailure": false,
+                            "useImpersonation": false,
+                            "showHidden": false,
+                            "impersonationUseSudo": false,
+                            "pluginVersion": 31,
+                            "commandName": "Download Artifacts",
+                            "pluginName": "UrbanCode Deploy Versioned File Storage",
+                            "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                            "properties": {
+                                "directoryOffset": ".",
+                                "artifactSetBaseDir": "",
+                                "fileIncludePatterns": "**\/*",
+                                "fileExcludePatterns": "",
+                                "syncMode": "true",
+                                "fullVerification": "true",
+                                "setFileExecuteBits": "false",
+                                "verifyFileIntegrity": "false",
+                                "versionId": "${p:version.id}",
+                                "serverUrl": "${p:server.url}",
+                                "compId": "${p:component.id}",
+                                "resId": "${p:resource.id}",
+                                "charset": "",
+                                "label": ""
+                            },
+                            "cachedAuthTokenRestriction": {
+                                "name": "System Default",
+                                "description": "Used by default for any plugin steps without a specified token restriction",
+                                "restrictions": [{
+                                    "verb": "ALL",
+                                    "url": "\/*"
+                                }]
+                            },
+                            "type": "plugin",
+                            "name": "Download node Js client package to the target host",
+                            "children": []
+                        },
+                        {
+                            "allowFailure": false,
+                            "useImpersonation": false,
+                            "showHidden": false,
+                            "impersonationUseSudo": false,
+                            "pluginVersion": 9,
+                            "commandName": "Shell",
+                            "pluginName": "Shell",
+                            "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                            "properties": {
+                                "directoryOffset": ".",
+                                "shellInterpreter": "",
+                                "scriptBody": "echo \"check if node js is installed in the target host\"\n#node\n",
+                                "runAsDaemon": "false",
+                                "outputFile": ""
+                            },
+                            "cachedAuthTokenRestriction": {
+                                "name": "System Default",
+                                "description": "Used by default for any plugin steps without a specified token restriction",
+                                "restrictions": [{
+                                    "verb": "ALL",
+                                    "url": "\/*"
+                                }]
+                            },
+                            "type": "plugin",
+                            "name": "Check if node.js is installed in the target host",
+                            "children": []
+                        }
+                    ]
+                }
+            }],
+            "configTemplates": [],
+            "genericProcesses": [],
+            "teamMappings": [],
+            "tags": []
+        }
+    ],
+    "environments": [
+        {
+            "name": "DEV",
+            "description": "",
+            "color": "#17AF4A",
+            "requireApprovals": false,
+            "noSelfApprovals": false,
+            "exemptProcesses": [],
+            "lockSnapshots": false,
+            "requireSnapshots": false,
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "enableProcessHistoryCleanup": true,
+            "useSystemDefaultDays": true,
+            "historyCleanupDaysToKeep": 365,
+            "order": 0,
+            "active": true,
+            "propSheet": {"properties": []},
+            "templatePropSheet": {
+                "name": "template",
+                "properties": []
+            },
+            "baseResources": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "DEV",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/DEV",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false
+                }
+            }],
+            "baseResourcesFull": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "DEV",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/DEV",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false,
+                    "children": [{
+                        "name": "ucdNodeClient",
+                        "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/DEV\/ucdNodeClient",
+                        "description": "",
+                        "parentName": "DEV",
+                        "inheritTeam": true,
+                        "roleName": "ucdNodeClientComp",
+                        "roleProperties": {
+                            "name": "ucdNodeClientComp",
+                            "properties": []
+                        },
+                        "propSheet": {
+                            "name": "custom",
+                            "properties": []
+                        },
+                        "tags": [],
+                        "teamMappings": [],
+                        "impersonationUseSudo": false,
+                        "impersonationForce": false,
+                        "prototype": false,
+                        "children": []
+                    }]
+                }
+            }],
+            "componentPropSheets": [
+                {
+                    "properties": [],
+                    "componentName": "AzureWorkbookComponent"
+                },
+                {
+                    "properties": [{
+                        "name": "installationPath",
+                        "description": "",
+                        "secure": false
+                    }],
+                    "componentName": "ucdNodeClientComp"
+                }
+            ],
+            "teamMappings": [],
+            "deploymentTriggers": []
+        },
+        {
+            "name": "QA",
+            "description": "",
+            "color": "#FFCF01",
+            "requireApprovals": false,
+            "noSelfApprovals": false,
+            "exemptProcesses": [],
+            "lockSnapshots": false,
+            "requireSnapshots": false,
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "enableProcessHistoryCleanup": true,
+            "useSystemDefaultDays": true,
+            "historyCleanupDaysToKeep": 365,
+            "order": 1,
+            "active": true,
+            "propSheet": {"properties": []},
+            "templatePropSheet": {
+                "name": "template",
+                "properties": []
+            },
+            "baseResources": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "QA",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/QA",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false
+                }
+            }],
+            "baseResourcesFull": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "QA",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/QA",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false,
+                    "children": [{
+                        "name": "ucdNodeClient",
+                        "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/QA\/ucdNodeClient",
+                        "description": "",
+                        "parentName": "QA",
+                        "inheritTeam": true,
+                        "roleName": "ucdNodeClientComp",
+                        "roleProperties": {
+                            "name": "ucdNodeClientComp",
+                            "properties": []
+                        },
+                        "propSheet": {
+                            "name": "custom",
+                            "properties": []
+                        },
+                        "tags": [],
+                        "teamMappings": [],
+                        "impersonationUseSudo": false,
+                        "impersonationForce": false,
+                        "prototype": false,
+                        "children": []
+                    }]
+                }
+            }],
+            "componentPropSheets": [
+                {
+                    "properties": [],
+                    "componentName": "AzureWorkbookComponent"
+                },
+                {
+                    "properties": [{
+                        "name": "installationPath",
+                        "description": "",
+                        "secure": false
+                    }],
+                    "componentName": "ucdNodeClientComp"
+                }
+            ],
+            "teamMappings": [],
+            "deploymentTriggers": []
+        },
+        {
+            "name": "PROD",
+            "description": "",
+            "color": "#D9182D",
+            "requireApprovals": false,
+            "noSelfApprovals": false,
+            "exemptProcesses": [],
+            "lockSnapshots": false,
+            "requireSnapshots": false,
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "enableProcessHistoryCleanup": true,
+            "useSystemDefaultDays": true,
+            "historyCleanupDaysToKeep": 365,
+            "order": 2,
+            "active": true,
+            "propSheet": {"properties": []},
+            "templatePropSheet": {
+                "name": "template",
+                "properties": []
+            },
+            "baseResources": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "PROD",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/PROD",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false
+                }
+            }],
+            "baseResourcesFull": [{
+                "basePath": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com",
+                "tree": {
+                    "name": "PROD",
+                    "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/PROD",
+                    "description": "",
+                    "parentName": "COMP-1433-1.Nonprod.hclpnp.com",
+                    "inheritTeam": true,
+                    "propSheet": {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    "tags": [],
+                    "teamMappings": [],
+                    "impersonationUseSudo": false,
+                    "impersonationForce": false,
+                    "prototype": false,
+                    "children": [{
+                        "name": "ucdNodeClient",
+                        "path": "\/Datacenter\/COMP-1433-1.Nonprod.hclpnp.com\/PROD\/ucdNodeClient",
+                        "description": "",
+                        "parentName": "PROD",
+                        "inheritTeam": true,
+                        "roleName": "ucdNodeClientComp",
+                        "roleProperties": {
+                            "name": "ucdNodeClientComp",
+                            "properties": []
+                        },
+                        "propSheet": {
+                            "name": "custom",
+                            "properties": []
+                        },
+                        "tags": [],
+                        "teamMappings": [],
+                        "impersonationUseSudo": false,
+                        "impersonationForce": false,
+                        "prototype": false,
+                        "children": []
+                    }]
+                }
+            }],
+            "componentPropSheets": [
+                {
+                    "properties": [],
+                    "componentName": "AzureWorkbookComponent"
+                },
+                {
+                    "properties": [{
+                        "name": "installationPath",
+                        "description": "",
+                        "secure": false
+                    }],
+                    "componentName": "ucdNodeClientComp"
+                }
+            ],
+            "teamMappings": [],
+            "deploymentTriggers": []
+        }
+    ],
+    "processes": [{
+        "name": "Deploy",
+        "description": "",
+        "inventoryManagementType": "AUTOMATIC",
+        "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+        "disableSnapshots": false,
+        "rootActivity": {
+            "edges": [
+                {
+                    "to": "2503dc6a8d8ec9f06b41dc890cf39c",
+                    "type": "ALWAYS",
+                    "value": ""
+                },
+                {
+                    "to": "c6881c0cc473486811ce2ae908af87",
+                    "from": "2503dc6a8d8ec9f06b41dc890cf39c",
+                    "type": "SUCCESS",
+                    "value": ""
+                }
+            ],
+            "offsets": [
+                {
+                    "name": "c6881c0cc473486811ce2ae908af87",
+                    "x": -5,
+                    "y": 420,
+                    "h": 80,
+                    "w": 120
+                },
+                {
+                    "name": "2503dc6a8d8ec9f06b41dc890cf39c",
+                    "x": -122,
+                    "y": 137.75,
+                    "h": 70,
+                    "w": 280
+                }
+            ],
+            "layoutMode": "manual",
+            "type": "graph",
+            "name": "5c8c2700-d17f-4129-acc4-1e398f35b43f",
+            "children": [
+                {
+                    "type": "finish",
+                    "name": "c6881c0cc473486811ce2ae908af87",
+                    "children": []
+                },
+                {
+                    "componentName": "ucdNodeClientComp",
+                    "properties": [
+                        {
+                            "name": "maxIteration",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "isIgnoreChildWarnings",
+                            "value": "false"
+                        },
+                        {
+                            "name": "failFast",
+                            "value": "false"
+                        }
+                    ],
+                    "type": "componentEnvironmentIterator",
+                    "name": "2503dc6a8d8ec9f06b41dc890cf39c",
+                    "children": [{
+                        "componentName": "ucdNodeClientComp",
+                        "status": "Active",
+                        "type": "inventoryVersionDiff",
+                        "name": "7d12eb51-5c6f-4597-8c40-3b54f05e94b6",
+                        "children": [{
+                            "componentProcessName": "Deploy",
+                            "componentName": "ucdNodeClientComp",
+                            "allowFailure": false,
+                            "properties": {"isIgnoreChildWarnings": "false"},
+                            "draftProperties": {"isIgnoreChildWarnings": "false"},
+                            "type": "componentProcess",
+                            "name": "Install: \"ucdNodeClientComp\"",
+                            "children": []
+                        }]
+                    }]
+                }
+            ]
+        },
+        "propDefs": [],
+        "versionPresets": []
+    }],
+    "genericProcesses": [],
+    "teamMappings": [],
+    "tags": []
+}
