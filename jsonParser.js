@@ -32,12 +32,14 @@ const components=[];
         
     } 
 
+    plugins.forEach(function(value, key) {
+        console.log(key + ' v' + value)
+      })
+
  /*   components.forEach(function(comp) {
     
     console.log ( comp.name );
     })*/
     
-    plugins.forEach(function(value, key) {
-        console.log(key + ' v' + value)
-      })
+    
 } );
