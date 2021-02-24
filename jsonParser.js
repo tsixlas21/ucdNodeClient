@@ -1,8 +1,6 @@
 const fs =require('fs');
-const Component = require("./objects/component.js");
 const Application=require("./objects/application.js")
-const compExportPath = "./static/exampleComponent.json";
-const appExportPath="./static/ucdApplicationExport.json"
+const appExportPath="./static/testApplication.json"
 
 fs.readFile (appExportPath,(err,data)=>{
     if (err) throw err;
@@ -18,23 +16,28 @@ const components=[];
         components.push(comp);
         
          for (const proc of comp.processes){
+             if(proc.rootActivity!=null){
             for (let index = 1; index < proc.rootActivity.children.length; index++) {
-            plugins.set(proc.rootActivity.children[index].pluginName,proc.rootActivity.children[index].pluginVersion)    
-        }
-         }
+                pluginName=proc.rootActivity.children[index].pluginName;
+                pluginVersion=proc.rootActivity.children[index].pluginVersion;
+                
+                if (plugins.has(pluginName)&plugins.get(pluginName)!=pluginVersion){
+                    console.log("There are multiple versions of plugin : " + pluginName + ": " + pluginVersion + " => Path: " + proc.path );
+                    break;
+                }
+            plugins.set(pluginName,pluginVersion)    
+        }}
+         
+    }
         
     } 
 
-    components.forEach(function(comp) {
+ /*   components.forEach(function(comp) {
     
     console.log ( comp.name );
-    })
+    })*/
     
     plugins.forEach(function(value, key) {
         console.log(key + ' v' + value)
       })
-
-    console.log(plugins.size);
-/*Get the list of component processes */
-
-        } );
+} );

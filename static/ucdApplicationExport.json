@@ -109,266 +109,128 @@
                     ]
                 }
             ]},
-            "processes": [
-                {
-                    "name": "Deploy",
-                    "description": "",
-                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
-                    "takesVersion": true,
-                    "inventoryActionType": "ADD",
-                    "status": "Active",
-                    "configActionType": "ADD",
-                    "active": true,
-                    "path": "components\/1752c825-4b9d-007c-dd9a-64750882009a\/processes\/1752c888-c466-b4d1-d332-023363a9a1da",
-                    "deleted": false,
-                    "propDefs": [],
-                    "rootActivity": {
-                        "edges": [
-                            {
-                                "to": "Set Process Request Property",
-                                "from": "Shell",
-                                "type": "SUCCESS",
-                                "value": ""
+            "processes": [{
+                "name": "Deploy",
+                "description": "",
+                "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                "takesVersion": true,
+                "inventoryActionType": "ADD",
+                "status": "Active",
+                "configActionType": "ADD",
+                "active": true,
+                "path": "components\/1752c825-4b9d-007c-dd9a-64750882009a\/processes\/1752c888-c466-b4d1-d332-023363a9a1da",
+                "deleted": false,
+                "propDefs": [],
+                "rootActivity": {
+                    "edges": [
+                        {
+                            "to": "Set Process Request Property",
+                            "from": "Shell",
+                            "type": "SUCCESS",
+                            "value": ""
+                        },
+                        {
+                            "to": "fb0aa84ddf6c337bf0419860a76c0c",
+                            "from": "Set Process Request Property",
+                            "type": "SUCCESS",
+                            "value": ""
+                        },
+                        {
+                            "to": "Shell",
+                            "type": "ALWAYS",
+                            "value": ""
+                        }
+                    ],
+                    "offsets": [
+                        {
+                            "name": "Set Process Request Property",
+                            "x": -242,
+                            "y": 250,
+                            "h": 70,
+                            "w": 320
+                        },
+                        {
+                            "name": "fb0aa84ddf6c337bf0419860a76c0c",
+                            "x": -5,
+                            "y": 420,
+                            "h": 80,
+                            "w": 120
+                        },
+                        {
+                            "name": "Shell",
+                            "x": -12,
+                            "y": 145,
+                            "h": 70,
+                            "w": 160
+                        }
+                    ],
+                    "layoutMode": "manual",
+                    "type": "graph",
+                    "name": "90d6f5bc-3228-41ef-82bd-64837cc4dde3",
+                    "children": [
+                        {
+                            "type": "finish",
+                            "name": "fb0aa84ddf6c337bf0419860a76c0c",
+                            "children": []
+                        },
+                        {
+                            "allowFailure": false,
+                            "useImpersonation": false,
+                            "showHidden": false,
+                            "impersonationUseSudo": false,
+                            "pluginVersion": 9,
+                            "commandName": "Shell",
+                            "pluginName": "Shell",
+                            "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                            "properties": {
+                                "directoryOffset": ".",
+                                "shellInterpreter": "",
+                                "scriptBody": "echo \"Hello From UrbanCode -Azure DevOps Integration\"\nsleep 10",
+                                "runAsDaemon": "false",
+                                "outputFile": ""
                             },
-                            {
-                                "to": "fb0aa84ddf6c337bf0419860a76c0c",
-                                "from": "Set Process Request Property",
-                                "type": "SUCCESS",
-                                "value": ""
+                            "cachedAuthTokenRestriction": {
+                                "name": "System Default",
+                                "description": "Used by default for any plugin steps without a specified token restriction",
+                                "restrictions": [{
+                                    "verb": "ALL",
+                                    "url": "\/*"
+                                }]
                             },
-                            {
-                                "to": "Shell",
-                                "type": "ALWAYS",
-                                "value": ""
-                            }
-                        ],
-                        "offsets": [
-                            {
-                                "name": "Set Process Request Property",
-                                "x": -242,
-                                "y": 250,
-                                "h": 70,
-                                "w": 320
+                            "type": "plugin",
+                            "name": "Shell",
+                            "children": []
+                        },
+                        {
+                            "allowFailure": false,
+                            "useImpersonation": false,
+                            "showHidden": false,
+                            "impersonationUseSudo": false,
+                            "pluginVersion": 8,
+                            "commandName": "Set Process Request Property",
+                            "pluginName": "UrbanCode Deploy Processes",
+                            "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
+                            "properties": {
+                                "propertyName": "test",
+                                "propertyValue": "test",
+                                "secureValue": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|TTm4VHPddbi8+Pgl4SXEjQ==|Xk0+EgKCP0euPLwBaSbblg==}",
+                                "processRequestId": "${p:request.id}"
                             },
-                            {
-                                "name": "fb0aa84ddf6c337bf0419860a76c0c",
-                                "x": -5,
-                                "y": 420,
-                                "h": 80,
-                                "w": 120
+                            "cachedAuthTokenRestriction": {
+                                "name": "System Default",
+                                "description": "Used by default for any plugin steps without a specified token restriction",
+                                "restrictions": [{
+                                    "verb": "ALL",
+                                    "url": "\/*"
+                                }]
                             },
-                            {
-                                "name": "Shell",
-                                "x": -12,
-                                "y": 145,
-                                "h": 70,
-                                "w": 160
-                            }
-                        ],
-                        "layoutMode": "manual",
-                        "type": "graph",
-                        "name": "90d6f5bc-3228-41ef-82bd-64837cc4dde3",
-                        "children": [
-                            {
-                                "type": "finish",
-                                "name": "fb0aa84ddf6c337bf0419860a76c0c",
-                                "children": []
-                            },
-                            {
-                                "allowFailure": false,
-                                "useImpersonation": false,
-                                "showHidden": false,
-                                "impersonationUseSudo": false,
-                                "pluginVersion": 9,
-                                "commandName": "Shell",
-                                "pluginName": "Shell",
-                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
-                                "properties": {
-                                    "directoryOffset": ".",
-                                    "shellInterpreter": "",
-                                    "scriptBody": "echo \"Hello From UrbanCode -Azure DevOps Integration\"\nsleep 10",
-                                    "runAsDaemon": "false",
-                                    "outputFile": ""
-                                },
-                                "cachedAuthTokenRestriction": {
-                                    "name": "System Default",
-                                    "description": "Used by default for any plugin steps without a specified token restriction",
-                                    "restrictions": [{
-                                        "verb": "ALL",
-                                        "url": "\/*"
-                                    }]
-                                },
-                                "type": "plugin",
-                                "name": "Shell",
-                                "children": []
-                            },
-                            {
-                                "allowFailure": false,
-                                "useImpersonation": false,
-                                "showHidden": false,
-                                "impersonationUseSudo": false,
-                                "pluginVersion": 8,
-                                "commandName": "Set Process Request Property",
-                                "pluginName": "UrbanCode Deploy Processes",
-                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
-                                "properties": {
-                                    "propertyName": "test",
-                                    "propertyValue": "test",
-                                    "secureValue": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhtwj|fr9uZ0D0VDkupwrce55KLA==|Hi6pVT\/xIz9CD4uRwEAiSA==}",
-                                    "processRequestId": "${p:request.id}"
-                                },
-                                "cachedAuthTokenRestriction": {
-                                    "name": "System Default",
-                                    "description": "Used by default for any plugin steps without a specified token restriction",
-                                    "restrictions": [{
-                                        "verb": "ALL",
-                                        "url": "\/*"
-                                    }]
-                                },
-                                "type": "plugin",
-                                "name": "Set Process Request Property",
-                                "children": []
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "testForJsonParsingSolution",
-                    "description": "",
-                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
-                    "takesVersion": true,
-                    "inventoryActionType": "ADD",
-                    "status": "Active",
-                    "configActionType": "ADD",
-                    "active": true,
-                    "path": "components\/1752c825-4b9d-007c-dd9a-64750882009a\/processes\/177d3985-395e-b245-66ff-f3ee4dc1d102",
-                    "deleted": false,
-                    "propDefs": [],
-                    "rootActivity": {
-                        "edges": [
-                            {
-                                "to": "a684ac31679e6bb813fdfbafc7c020",
-                                "from": "Shell",
-                                "type": "SUCCESS",
-                                "value": ""
-                            },
-                            {
-                                "to": "Shell",
-                                "from": "Download Artifacts",
-                                "type": "SUCCESS",
-                                "value": ""
-                            },
-                            {
-                                "to": "Download Artifacts",
-                                "type": "ALWAYS",
-                                "value": ""
-                            }
-                        ],
-                        "offsets": [
-                            {
-                                "name": "Shell",
-                                "x": 77,
-                                "y": 220.25,
-                                "h": 70,
-                                "w": 160
-                            },
-                            {
-                                "name": "a684ac31679e6bb813fdfbafc7c020",
-                                "x": -5,
-                                "y": 420,
-                                "h": 80,
-                                "w": 120
-                            },
-                            {
-                                "name": "Download Artifacts",
-                                "x": 170,
-                                "y": 49.25,
-                                "h": 70,
-                                "w": 260
-                            }
-                        ],
-                        "layoutMode": "manual",
-                        "type": "graph",
-                        "name": "0eabbd0f-2b7b-48d8-a31b-379318506509",
-                        "children": [
-                            {
-                                "type": "finish",
-                                "name": "a684ac31679e6bb813fdfbafc7c020",
-                                "children": []
-                            },
-                            {
-                                "allowFailure": false,
-                                "useImpersonation": false,
-                                "showHidden": false,
-                                "impersonationUseSudo": false,
-                                "pluginVersion": 35,
-                                "commandName": "Download Artifacts",
-                                "pluginName": "UrbanCode Deploy Versioned File Storage",
-                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
-                                "properties": {
-                                    "directoryOffset": ".",
-                                    "artifactSetBaseDir": "",
-                                    "fileIncludePatterns": "**\/*",
-                                    "fileExcludePatterns": "",
-                                    "syncMode": "true",
-                                    "handleIncrementalVersions": "false",
-                                    "fullVerification": "true",
-                                    "setFileExecuteBits": "false",
-                                    "verifyFileIntegrity": "false",
-                                    "charset": "",
-                                    "versionId": "${p:version.id}",
-                                    "versionType": "${p:version.type}",
-                                    "serverUrl": "${p:server.url}",
-                                    "compId": "${p:component.id}",
-                                    "resId": "${p:resource.id}",
-                                    "envId": "${p:environment.id}",
-                                    "maxMemory": "1G",
-                                    "label": ""
-                                },
-                                "cachedAuthTokenRestriction": {
-                                    "name": "System Default",
-                                    "description": "Used by default for any plugin steps without a specified token restriction",
-                                    "restrictions": [{
-                                        "verb": "ALL",
-                                        "url": "\/*"
-                                    }]
-                                },
-                                "type": "plugin",
-                                "name": "Download Artifacts",
-                                "children": []
-                            },
-                            {
-                                "allowFailure": false,
-                                "useImpersonation": false,
-                                "showHidden": false,
-                                "impersonationUseSudo": false,
-                                "pluginVersion": 9,
-                                "commandName": "Shell",
-                                "pluginName": "Shell",
-                                "authTokenRestriction": "20000001-0001-0001-0001-000000000000",
-                                "properties": {
-                                    "directoryOffset": ".",
-                                    "shellInterpreter": "",
-                                    "scriptBody": "echo Hello World",
-                                    "runAsDaemon": "false",
-                                    "outputFile": ""
-                                },
-                                "cachedAuthTokenRestriction": {
-                                    "name": "System Default",
-                                    "description": "Used by default for any plugin steps without a specified token restriction",
-                                    "restrictions": [{
-                                        "verb": "ALL",
-                                        "url": "\/*"
-                                    }]
-                                },
-                                "type": "plugin",
-                                "name": "Shell",
-                                "children": []
-                            }
-                        ]
-                    }
+                            "type": "plugin",
+                            "name": "Set Process Request Property",
+                            "children": []
+                        }
+                    ]
                 }
-            ],
+            }],
             "configTemplates": [],
             "genericProcesses": [],
             "teamMappings": [],
