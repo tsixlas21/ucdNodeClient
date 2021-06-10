@@ -11,7 +11,7 @@ fs.readFile (appExportPath,(err,data)=>{
 /*Get and print the list of plugins used by this application */
 const components=[];
     for (const comp of tempData.components) {
-        components.push(comp);
+       // components.push(comp);
         
          for (const proc of comp.processes){
              if(proc.rootActivity!=null){
