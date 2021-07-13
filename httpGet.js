@@ -12,7 +12,7 @@ const path=args[5]
 const headers ={'Authorization': 'Basic ' + Buffer.from('admin:admin').toString('base64'),'Content-Type': 'application/json; charset=utf-8'}
 
 
-//UCD server's host details
+//UCD server's host details testing changes
 
 const hostName =args[2];
 console.log("This is the hostname provided " +hostName);
