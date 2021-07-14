@@ -5,10 +5,12 @@
  processes;
  componentTemplate;   
 
- constructor (name, srcType){
+ constructor (name, srcType,componentTemplate){
 
+    this.componentTemplate;
     this.name =name;
     this.srcType=srcType;
+
 }
 
 
