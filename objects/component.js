@@ -2,7 +2,8 @@
 
  name;
  srcType;
- processes;   
+ processes;
+ componentTemplate;   
 
  constructor (name, srcType){
 
