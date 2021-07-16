@@ -32,12 +32,6 @@ set srcType(srcType){
     this.srcType=srcType;
 
 }
-set teams(teams){
-    this.teams=teams;
-
-
-
-
 
 
 
