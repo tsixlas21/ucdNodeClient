@@ -20,6 +20,10 @@ get name(){
     return this.name;
 }
 
+get teams(){
+    return this.teams;
+}
+
 get srcType(){
     return this.srcType;
 }
