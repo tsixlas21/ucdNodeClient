@@ -36,8 +36,6 @@ set srcType(srcType){
 
 
 
-
-
 }
 
 module.exports=Component;
