@@ -4,12 +4,14 @@
  srcType;
  processes;
  componentTemplate;   
+ teams;
 
- constructor (name, srcType,componentTemplate){
+ constructor (name, srcType,componentTemplate,teams){
 
     this.componentTemplate;
     this.name =name;
     this.srcType=srcType;
+    this.teams=teams;
 
 }
 
