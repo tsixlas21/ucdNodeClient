@@ -1,11 +1,13 @@
 class ComponentProcess{
 
     name;
-    plugins;   
+    plugins;
+    id;
    
-    constructor (name){
+    constructor (name,id){
    
        this.name =name;
+       this.name=name;
    }
    
    
