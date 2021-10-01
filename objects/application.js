@@ -4,6 +4,7 @@ name;
 id;
 version;
 type;
+meta;
 
 constructor(name){
 
